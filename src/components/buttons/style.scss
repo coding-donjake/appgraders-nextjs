@@ -1,0 +1,78 @@
+.btn {
+  @apply flex whitespace-nowrap gap-2 items-center justify-center;
+  @apply px-5 py-2.5;
+  @apply rounded-lg focus:outline-none focus:ring-4;
+  @apply font-medium text-sm;
+  &-primary {
+    @apply bg-blue-700 text-white hover:bg-blue-800 focus:ring-blue-300;
+  }
+  &-secondary {
+    @apply bg-gray-800 text-white hover:bg-gray-900 focus:ring-gray-300;
+  }
+  &-danger {
+    @apply bg-red-700 text-white hover:bg-red-800 focus:ring-red-300;
+  }
+  &-pill {
+    &-primary {
+      @extend .btn-primary;
+      @apply rounded-full;
+    }
+    &-secondary {
+      @extend .btn-secondary;
+      @apply rounded-full;
+    }
+    &-danger {
+      @extend .btn-danger;
+      @apply rounded-full;
+    }
+  }
+  &-icon {
+    &-primary {
+      @extend .btn-primary;
+      @apply p-0 w-10 rounded-full;
+    }
+    &-secondary {
+      @extend .btn-secondary;
+      @apply p-0 w-10 rounded-full;
+    }
+    &-danger {
+      @extend .btn-danger;
+      @apply p-0 w-10 rounded-full;
+    }
+  }
+  .icon-wrapper {
+    @apply flex items-center justify-center;
+    @apply w-3 h-3;
+    * {
+      @apply w-3 h-3 m-auto;
+    }
+  }
+  .content-wrapper {
+    @apply flex-1;
+  }
+  &-expanded {
+    @extend .btn;
+    @apply flex-1;
+    .content-wrapper {
+      flex: 0 0 0%;
+    }
+  }
+}
+
+.slate .btn {
+  &-primary,
+  &-icon-primary,
+  &-pill-primary {
+    @apply bg-blue-600 hover:bg-blue-700 focus:ring-blue-800;
+  }
+  &-secondary,
+  &-icon-secondary,
+  &-pill-secondary {
+    @apply bg-gray-200 border-gray-300 text-gray-800 hover:bg-gray-300 focus:ring-gray-300;
+  }
+  &-danger,
+  &-icon-danger,
+  &-pill-danger {
+    @apply bg-red-600 hover:bg-red-700 focus:ring-red-900;
+  }
+}
